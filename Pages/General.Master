@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="General.master.cs" Inherits="WebApp.Pages.General" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فروشگاه کتاب افکار</title>
+    <link href="../Content/General.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- هدر -->
+        <div class="header">
+            <div class="container">
+                <div class="header-content">
+                    <a href="Default.aspx" class="logo">📚 افکار کتاب</a>
+                    
+                    <div class="nav">
+                        <asp:PlaceHolder ID="pnlAuth" runat="server" Visible="false">
+                            <a href="/Pages/User/Products.aspx">📖 کتاب‌ها</a>
+                            <a href="/Pages/User/Cart.aspx">🛒 سبد خرید</a>
+                            <asp:PlaceHolder ID="pnlAdmin" runat="server" Visible="false">
+                                <a href="/Pages/Admin/Dashboard.aspx">⚙️ مدیریت</a>
+                            </asp:PlaceHolder>
+                            <a href="/Pages/User/Profile.aspx"><span class="user-info">👤 <asp:Literal ID="ltrUser" runat="server" /></span></a>
+                            <asp:LinkButton ID="btnLogout" runat="server" CssClass="logout" OnClick="btnLogout_Click" Text="🚪 خروج" />
+                        </asp:PlaceHolder>
+                        
+                        <asp:PlaceHolder ID="pnlGuest" runat="server" Visible="true">
+                            <a href="Login.aspx">🔐 ورود</a>
+                            <a href="Register.aspx">📝 ثبت‌نام</a>
+                        </asp:PlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main">
+            <div class="container">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="container">
+                <p>© 2024 فروشگاه کتاب افکار | تمامی حقوق محفوظ است</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

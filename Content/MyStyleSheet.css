@@ -1,0 +1,39 @@
+﻿body {
+    font-family: Tahoma;
+    direction: rtl;
+}
+
+.btn {
+    background-color: darkturquoise;
+    color: white;
+    width: 100%;
+    align-self: center;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 30px
+}
+
+.txt_box {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.login-container {
+    width: 350px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
